@@ -1,4 +1,0 @@
-lcd j:
-lcd "J:\Horizon_sftp\sftp_out\"
-
-put TEST_ASSIGNMENTS*.txt
