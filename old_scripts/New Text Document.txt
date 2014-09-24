@@ -1,0 +1,4 @@
+@echo on
+
+cd /cygdrive/c/DB/DBbackups/
+gzip -dv so1masterSQL*

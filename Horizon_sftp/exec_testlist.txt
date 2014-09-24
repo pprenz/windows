@@ -1,0 +1,6 @@
+lcd sftp_testlist
+
+cd /Outgoing/TestListings/
+mget Add_IDs_* 
+
+mv "*.csv" ./past_files

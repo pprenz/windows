@@ -1,0 +1,7 @@
+
+
+lcd C:\DB\So1txbackups\
+
+cd /cygdrive/C/DB/So1TX/
+
+mput so1tx_*.bak

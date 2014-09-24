@@ -1,0 +1,129 @@
+--Haproxy--
+/etc/init.d/haproxy {status|start|stop|restart}
+/etc/haproxy/haproxy.cfg --config file
+==================================================
+
+cd /opt/so1/hudson/
+--Hudson/Jenkins---
+java -jar hudson.war (or jenkins.war)  > logfile.txt 2>&1 &
+
+--new jenkins on util0
+>>>>>>>> location - /usr/share/jenkins/jenkins.war
+
+java -jar jenkins.war --httpPort=-1 --httpsPort=443 --httpsKeyStore=path/to/keystore --httpsKeyStorePassword=keystorePassword > logfile.txt 2>&1 &
+ *****works under root----->>> java -jar jenkins.war --httpPort=-1 --httpsPort=443 > logfile.txt 2>&1 &
+
+-----------------------------
+New Jenkins 
+-@util0
+u: phil
+@T.....
+---------
+u: admin
+p: Hudsonadmin@so1 
+  
+========================================================
+
+---NGINX---
+/etc/nginx/nginx.cfg - config file
+/etc/init.d/nginx {status|start|stop|restart}
+===================================================
+
+---Tornado---
+/sbin/status so1web1
+===================================================
+#!/usr/bin/env python
+
+---MemCache---
+sudo /sbin/status memcached-session 
+{status|start|stop|restart}
+------------------------------------
+sudo /sbin/restart memcached-data
+{status|start|stop|restart}
+------------------------------------
+--fab Clear memcache
+ssh root@util0.schoolofonev.net "cd /opt/so1/release && /usr/bin/fab -R prod -i ~/.ssh/so1web_so1cloud_rsa clear_data_cache" --for prod
+ssh root@util0.schoolofone.net "cd /opt/so1/release && /usr/bin/fab -R standby -i ~/.ssh/so1web_so1cloud_rsa clear_data_cache" --for standby 
+===================================================
+
+-----------connection points from cloud servers to DB----------------------
+    open /etc/odbc.ini and /etc/odbcinst.ini
+    the path to the pyodbc file should be listed in one of those 2 files
+***************************************************
+
+*******************DenyHosts**************************************
+
+/etc/init.d/denyhosts start
+
+DENYHOSTS_BIN = "/usr/bin/denyhosts.py"
+DENYHOSTS_LOCK = "/var/run/denyhosts.pid"
+DENYHOSTS_CFG = "/usr/share/denyhosts/denyhosts.cfg"
+========================================================================
+---Cygwin SSH---
+net stop sshd
+net start sshd
+==================================================
+
+Mifi 4G
+UN: MIFI4510L B820
+PW: 99000046708228
+---------------------------------------------------
+
+****************************************************
+cloud0 	 	184.106.209.192 	10.179.116.12	
+cloud1 	 	184.106.209.98 	    10.179.114.65 	
+cloud2 		184.106.229.244 	10.179.110.14
+cloud3      184.106.39.63       10.179.98.149
+cloud5	    184.106.39.62       10.179.108.140
+---
+util0 	 	184.106.233.224 	10.179.98.235
+util1      
+--- 
+WcloudB  	184.106.243.14 	    10.179.139.215	
+---------------
+Hosted servers
+---------------
+db           184.106.39.60      192.168.100.60
+db01         184.106.13.128     192.168.100.128
+*****************************************************
+
+verify ----/etc/puppet/files/release/opt/so1/fabfile.py
+
+=====================================================================
+ dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M") --python time without seconds.
+------------------------------------------------------------------------
+  
+8 instances of Tornado portal running on the cloud# servers
+ 
+2 instances of memcache running on each cloud server (1 session & 1 data)
+---/usr/bin/memcached -p 11213 -m 100 -u nobody -l 10.179.110.14
+
+2 instances of Nginx running on each cloud server (master & worker)
+
+ |++++++++++++++++++++++++|
+ |  @abcd1234@fatcow.com  |
+ |  @Abcd1234@so1         |
+ |++++++++++++++++++++++++|
+ 
+ ****************************************************************************
+ linux security
+ denyHost
+ UFW
+ 
+ ********************************************************************************
+ --rsync -auvzn 
+rsync -auvz /home/portalscreenshots/ wclouda:/home/so1docs/Portal_Screenshots/
+
+**********************************
+MSSQL 2008
+JD8Y6-HQG69-P9H84-XDTPG-34MBB
+--------------------------------
+MSSQL 2008 R2
+GYF3T-H2V88-GRPPH-HWRJP-QRTYB
+***********************************
+
+
+
+
+
+

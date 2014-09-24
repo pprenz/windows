@@ -1,0 +1,7 @@
+cd /Incoming/RosterUpdates/
+
+lcd j:
+lcd J:\Horizon_sftp\RosterUpdate\
+
+
+mput SO1_*.txt

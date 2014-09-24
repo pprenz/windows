@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>hudson.diagnosis.UpdateCenterChooser</string>
+  </disabledAdministrativeMonitors>
+  <version>1.417</version>
+  <numExecutors>10</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Hudson.Administer:admin</permission>
+    <permission>hudson.model.Hudson.Administer:phil</permission>
+    <permission>hudson.model.Hudson.Read:operator</permission>
+    <permission>hudson.model.Hudson.Read:viewer</permission>
+    <permission>hudson.model.Item.Build:operator</permission>
+    <permission>hudson.model.Item.Read:operator</permission>
+    <permission>hudson.model.Item.Read:viewer</permission>
+    <permission>hudson.model.Run.Update:operator</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <systemMessage>&lt;style&gt;&#xd;
+.useful_links li {&#xd;
+  margin-bottom: 10px;&#xd;
+}&#xd;
+&#xd;
+.useful_links {&#xd;
+ margin-left: 20px;&#xd;
+}&#xd;
+&#xd;
+.useful_links {&#xd;
+ border-collapse: collapse;&#xd;
+}&#xd;
+&#xd;
+.useful_links td,  .useful_links th {&#xd;
+ font-size: 14px;&#xd;
+ padding: 10px;&#xd;
+}&#xd;
+&lt;/style&gt;&#xd;
+&lt;img src=&quot;http://so1live.com/static/images/logos/so1_logo_blue_shine.png&quot; /&gt;&#xd;
+&#xd;
+&lt;marquee&gt;School of one&lt;/marquee&gt;&#xd;
+&#xd;
+&lt;h3&gt;Useful links&lt;/h3&gt;&#xd;
+&#xd;
+&lt;table class=&quot;useful_links&quot;&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;th&gt;&amp;nbsp;&lt;/th&gt;&#xd;
+  &lt;th&gt;Dev&lt;/th&gt;&#xd;
+  &lt;th&gt;Dev via Hamachi&lt;/th&gt;&#xd;
+  &lt;th&gt;Prod&lt;/th&gt;&#xd;
+  &lt;th&gt;Standby&lt;/th&gt;&#xd;
+  &lt;th&gt;Other&lt;/th&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Portal&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://10.1.215.88:9000/&quot;&gt;ubm01:9000&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://5.7.119.72:9000/&quot;&gt;ubm01:9000&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://so1live.com/&quot;&gt;so1live&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://dev.so1live.com/&quot;&gt;dev.so1live&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Scheduler&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://10.1.215.88:10007/&quot;&gt;ubm01:10007&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://5.7.119.72:10007/&quot;&gt;ubm01:10007&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Full student roster&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://10.1.215.88:8988/vendor/2a2dba65f1aeb28ac84a24f848e24a42/full_roster.csv&quot;&gt;ubm01:8988&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://5.7.119.72:8988/vendor/2a2dba65f1aeb28ac84a24f848e24a42/full_roster.csv&quot;&gt;ubm01:8988&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://so1live.com/vendor/2a2dba65f1aeb28ac84a24f848e24a42/full_roster.csv&quot;&gt;so1live&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Portal backlog&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://so1.unfuddle.com/&quot;&gt;Unfuddle&lt;/a&gt;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Wiki&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;https://sites.google.com/site/schoolofone/&quot;&gt;Google Sites&lt;/a&gt;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Code repo&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://so1.unfuddle.com/&quot;&gt;Unfuddle&lt;/a&gt;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;tr&gt;&#xd;
+  &lt;td&gt;Hosting&lt;/td&gt;&#xd;
+  &lt;td&gt;ts01&lt;/td&gt;&#xd;
+  &lt;td&gt;ts01&lt;/td&gt;&#xd;
+  &lt;td&gt;&lt;a href=&quot;http://rackspacecloud.com&quot;&gt;Rackspace&lt;/a&gt;&lt;/td&gt;&#xd;
+  &lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;
+&lt;/tr&gt;&#xd;
+&lt;/table&gt;&#xd;
+&#xd;
+&#xd;
+</systemMessage>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter"/>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <slaves/>
+  <quietPeriod>0</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Exports</name>
+      <description>This view is for files that need to go out from Central on a daily basis.&#xd;
+&lt;br/&gt;&lt;br/&gt;A. The &quot;Generate...&quot; jobs creates the batched PDFs for each site which include SGC, P2P, and IP worksheets.&lt;br/&gt;B. The &quot;Generate pdf...&quot; report specifically creates a report that one must comb through to find missing PDFs and vet with Adam about his uploads to the CDN.&lt;br/&gt;C. The &quot;Send vendor files&quot; does just that: sends vendor files to Richard&apos;s vendors.  Start this job immediately after schedules are pushed!</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DS21 - Send Vendor Files</string>
+        <string>DS23 - Generate Staging and Homework Files</string>
+        <string>Generate Adam R.&apos;s pdf coverage report</string>
+        <string>Generate the 131 staging files</string>
+        <string>Generate the 228 staging files</string>
+        <string>Generate the 339 staging files</string>
+        <string>Generate the homework for 131</string>
+        <string>Generate the homework for 228</string>
+        <string>Generate the homework for 339</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Data Jobs</name>
+      <description>Jobs that have to do with massaging data.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>DS11 - Update Rosters</string>
+        <string>Generate Grade Report Query</string>
+        <string>Update materialized views</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Release</name>
+      <description>This view is for the jobs that are relevant to pushing to Production.  So, here&apos;s a possible usual order of steps:&#xd;
+&lt;br/&gt;1. Build &quot;Portal maintenance mode&quot;&#xd;
+&lt;br/&gt;2. Build &quot;ts01 db prod push&quot;&#xd;
+&lt;br/&gt;3. Build &quot;Portal remove maintenance mode&quot;&#xd;
+&lt;br/&gt;&lt;br/&gt;&#xd;
+Alternate Step: Build &quot;Portal Release&quot;, to be done by H. Cacace only when Portal code is ready to be pushed.&#xd;
+&lt;br/&gt;Note: &quot;Portal clear data cache&quot; should be run when Adam does something funny in the middle of the day.  Otherwise, it&apos;s taken care of normally in other jobs.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Dev Portal Repo Update</string>
+        <string>Portal clear data cache</string>
+        <string>Portal maintenance mode</string>
+        <string>Portal Release</string>
+        <string>Portal remove maintenance mode</string>
+        <string>Portal restart</string>
+        <string>Staging Portal Release</string>
+        <string>ts01 db prod push</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Daily Scheduling</name>
+      <description> - DS jobs constitute automated daily scheduling. It&apos;s critical to run them in the order in which they appear.&lt;br/&gt;&#xd;
+ - MT jobs provide manual tools for the cases when we need to deviate from the automated jobs. We don&apos;t normally need to run these, but when we do it&apos;s up to the operator to run them in the order that provides the desired results.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DS09 - Import Assessment Results</string>
+        <string>DS09A -  Download Horizon Assessment Results</string>
+        <string>DS10 - Plan Updates</string>
+        <string>DS11 - Update Rosters</string>
+        <string>DS12 - Send Roster Updates to Horizon</string>
+        <string>DS13 - Finish importing results and Run Skill Selection</string>
+        <string>DS14 - Greedify Skill Selection</string>
+        <string>DS15 - Run Scheduler</string>
+        <string>DS16 - Assign Students Who Ran Out Of Lessons</string>
+        <string>DS17 - Assign Homework</string>
+        <string>DS18 - Schedule Magnet Students</string>
+        <string>DS18 - Schedule Plan-1 Students</string>
+        <string>DS19 - Run Integrity Tests</string>
+        <string>DS20 - Push To Production</string>
+        <string>DS20A - Trigger Happy.</string>
+        <string>DS21 - Send Vendor Files</string>
+        <string>DS22 - Horizon Assignment Upload</string>
+        <string>DS23 - Generate Staging and Homework Files</string>
+        <string>DS25 - Send &quot;Schedules Are Done&quot; Email</string>
+        <string>DSXX - Import Diagnostic Results</string>
+        <string>Generate Grade Report Query</string>
+        <string>Newly Scheduled Live Content</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Notifications</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Sample Email</string>
+        <string>Scheduler QA Email</string>
+        <string>Send &quot;SO1TX Pushed To TS01&quot; Email</string>
+        <string>Send DB  Push To Prod. Email</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Maintenance</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Send DB  Push To Prod. Email</string>
+        <string>Verify vendor links</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Scheduled Jobs</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Auto_Add Horizon Assessments IDs_A</string>
+        <string>Compress PDFs and give them unguessable secure names</string>
+        <string>DS09A -  Download Horizon Assessment Results</string>
+        <string>Portal restart</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>MT - manual tools</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[7]/jobNames/comparator"/>
+        <string>MT - Deactivate Homework Assignments For Date</string>
+        <string>MT - Deactivate Schedules For Period</string>
+        <string>MT - Exclude Sections From Scheduling</string>
+        <string>MT - Remove Homework Assignments For Date</string>
+        <string>MT - Remove Schedules For Periods</string>
+        <string>MT - Substitute Staff Members</string>
+        <string>MT - Sync A-B Days for 339 (CI)</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Horizon</name>
+      <description>All Horizon jobs.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Delete Horizon Assessments IDs</string>
+        <string>DS09A -  Download Horizon Assessment Results</string>
+        <string>DS12 - Send Roster Updates to Horizon</string>
+        <string>DS22 - Horizon Assignment Upload</string>
+        <string>DS22A - Auto Resend Assignment w. New TEST</string>
+        <string>Manual_Add Horizon Assessments IDs</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>GIT</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[9]/jobNames/comparator"/>
+        <string>Dev Portal Repo Update</string>
+        <string>Portal 01 - Cut or Move QA branch</string>
+        <string>Portal 02 - Push branch to dev</string>
+        <string>Portal 02.1 - QA email</string>
+        <string>Portal 03 - Deliver QA branch to prod</string>
+        <string>Portal 04 - Merge QA branch into master</string>
+        <string>Portal Release</string>
+        <string>Portal Release to STANDBY</string>
+        <string>Scripts - Pull latest</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>DB-Push and Pull</name>
+      <description>These jobs push or pull DBs from server to server.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DS20 - Push To Production</string>
+        <string>Pull Attendance DB from Prod.</string>
+        <string>Push To Backup Dev - TS01 to TS03.</string>
+        <string>Push to Standby Env.</string>
+        <string>So1TX Push</string>
+        <string>Test-push</string>
+        <string>ts01 db prod push</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.CronViewColumn/>
+      </columns>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>portal</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <jobNames class="tree-set">
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Dev Portal Repo Update</string>
+        <string>Portal clear data cache</string>
+        <string>Portal costly queries</string>
+        <string>Portal maintenance mode</string>
+        <string>Portal Release</string>
+        <string>Portal Release to STANDBY</string>
+        <string>Portal remove maintenance mode</string>
+        <string>Portal restart</string>
+        <string>Portal Restart for Standby</string>
+        <string>Portal test server build</string>
+        <string>Teacher Portal ScreenShots</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <hudson.plugins.CronViewColumn/>
+      </columns>
+    </listView>
+  </views>
+  <primaryView>All</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties>
+    <hudson.slaves.EnvironmentVariablesNodeProperty>
+      <envVars serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>4</int>
+          <string>DB</string>
+          <string>TS01</string>
+          <string>Prod</string>
+          <string>db.schoolofone.net</string>
+          <string>server_TS01</string>
+          <string>3</string>
+          <string>ts03</string>
+          <string>10.1.215.103</string>
+        </tree-map>
+      </envVars>
+    </hudson.slaves.EnvironmentVariablesNodeProperty>
+  </globalNodeProperties>
+  <noUsageStatistics>true</noUsageStatistics>
+</hudson>

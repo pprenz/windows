@@ -1,0 +1,6 @@
+cd /Incoming/TestAssignments/
+
+lcd j:
+lcd J:\Horizon_sftp\sftp_out\
+
+mput TEST_ASSIGNMENTS*.txt

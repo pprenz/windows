@@ -1,0 +1,54 @@
+ECHO is off.
+                       ***********************************  
+                       ***** SO1TX DB PUSH LOG FILE ******  
+                       ***********************************  
+                               START TIME: Wed 10/06/2010 -  1:56:33.57                   
+                       ----------------------------------------------------  
+-------- Saving Old Backups-------------  
+  
+--- Moving previous DB backups into "olddbBackups" ----  
+C:\DB\So1txbackups\so1tx_10-06-2010.bak
+        1 file(s) moved.
+Z:\So1TX_backup\so1tx_10-06-2010.bak
+        1 file(s) moved.
+-------------------------------------------------------  
+  
+ 
+-------- Backing-Up SO1TX On Production. -----------------------  
+Starting the backup  
+Processed 2096 pages for database 'so1tx', file 'so1tx' on file 1.
+Processed 1 pages for database 'so1tx', file 'so1tx_log' on file 1.
+BACKUP DATABASE successfully processed 2097 pages in 0.156 seconds (105.018 MB/sec).
+----------------------------------------------------  
+  
+ 
+-------- Transferring Files to TS03-------------  
+C:\DB\So1txbackups\so1tx_10-06-2010.bak
+1 File(s) copied
+  
+----------------------------------------------------  
+  
+  
+--------- Restoring DB on TS03 Server -------  
+Changed database context to 'master'.
+12 percent processed.
+24 percent processed.
+30 percent processed.
+42 percent processed.
+54 percent processed.
+61 percent processed.
+73 percent processed.
+85 percent processed.
+91 percent processed.
+100 percent processed.
+Processed 2096 pages for database 'so1tx', file 'so1tx' on file 1.
+Processed 1 pages for database 'so1tx', file 'so1tx_log' on file 1.
+RESTORE DATABASE successfully processed 2097 pages in 2.339 seconds (7.004 MB/sec).
+  
+  
+----------------------------------------------------- 
+                       **************************************************** 
+                       *****************  END OF LOG FILE ***************** 
+                       **************************************************** 
+                               END TIME: Wed 10/06/2010 -  1:59:12.12                    
+                       ---------------------------------------------------- 

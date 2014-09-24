@@ -1,0 +1,7 @@
+lcd SFTP
+
+cd /Outgoing/ResultsExtract/
+
+mget Results* 
+
+mv "*.zip" ./pastfiles

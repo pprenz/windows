@@ -1,0 +1,48 @@
+**Networking
+---laying drops
+---wifi
+---firewall - rules
+---vpn
+---network w. Isp
+
+
+**servers
+---manage in-house infrastructure
+---manage cloud servers
+---user administration
+---create redundancy of env.
+
+**Laptops
+---dual boot with mac and windows
+---security
+---helpdesk - tshoot issues, soft. installations
+---remote access
+
+**Database
+---dev, prod and staging env.
+---user mang.
+--- data encryption
+--- backup encryption
+**Backups
+---server backups
+---on site backups and off-site backups
+---laptop backups
+
+**Misc.
+--licensing
+--Db
+--email system mang.
+--backup and maintain external site.
+--implement more virtual servers
+
+**Security
+--- encrypt all communications bet. Servers and central office
+--- encrypt backups
+--- server monitoring with alerts
+---anti-virus mang.
+
+
+---2 wks vac.
+---# sick days
+---holidays paid
+---401K

@@ -1,0 +1,67 @@
+++++++++TEST STUDENT ID (verify portal)+++++++++++
+student id: 206604746
+pwd: zunerocks
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+---Check TEST IDs----------------------------------
+select * from scrap.LatestRawAssessmentResults
+select * from dbo.Assessments
+
+select * from dbo.Assessments where AspireTestID between 30740 and 30745
+
+select * from dbo.Assessments where AspireTestID = #
+
+select * from scrap.AspireTestsDelta
+
+select * from dbo.Assessments where AspireTestID = 30618
+select * from dbo.Assessments where AssessmentName = '8.G.02_01'
+
+update dbo.Assessments set AssessmentName =	'	8.N.05_07	'	where AspireTestID =	25690
+
+select * from ActiveStudents where StudentId = 274646181
+-----------------------------------------------------
+
+insert into dbo.AssessmentResults(StudentId, AssessmentId,
+AssessmentDate, result)
+values (207843160, 4726, '2011-05-06', 0)
+
+=========================================================
+
+------Check TEST IDs----------------------------------
+select * from scrap.LatestRawAssessmentResults
+select * from dbo.Assessments
+
+select * from dbo.Assessments where AspireTestID between 30740 and 30745
+
+select * from dbo.Assessments where AspireTestID = #
+
+select * from scrap.AspireTestsDelta
+
+select * from dbo.Assessments where AspireTestID = 30307
+select * from dbo.Assessments where AssessmentName = '8.G.02_01'
+
+update dbo.Assessments set AssessmentName =	'8.N.05_07'	where AspireTestID = 25690
+
+update dbo.Assessments set RowUpdatedDate =	'2011-05-02 15:20:29.053' where AssessmentId = 30307
+-----------------------------------------------------
+
+update dbo.Assessments set RowUpdatedDate =  '	2010-09-17 15:20:29.053' 	where AssessmentId = 	23463
+
+********************insert phatom assessment results data *****************************
+insert into dbo.AssessmentResults(StudentId, AssessmentId,
+AssessmentDate, result)
+values (203456470, 3904, '2011-05-25', 0)
+****************************************************************************************
+
+
+===================================================================================
+make so1web sudo
+
+    /etc/odbc.ini
+    and maybe portal_source_code_loc /etc/so1-web.ini
+    odbc.ini will have the ip addresses
+
+    call it [so1staging] under odbc.ini
+    and use DSN=so1staging under etc/so1-web.ini
+    look at the other entries and figure out what the logging and stuff should use
+======================================================================================
