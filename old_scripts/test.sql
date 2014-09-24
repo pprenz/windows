@@ -1,1 +1,0 @@
-select * from so1masterSQL_sept_clean
