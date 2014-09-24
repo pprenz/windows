@@ -1,5 +1,0 @@
-lcd SFTP
-
-cd /Outgoing/ResultsExtract/
-
-mget Results* 
